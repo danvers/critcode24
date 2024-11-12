@@ -12,10 +12,6 @@ Thank you for considering contributing to this repository! We appreciate your su
 6. **Push Changes**: Push your changes to your forked repository.
 7. **Create a Pull Request**: Open a pull request to the main repository with a description of your changes.
 
-## Code of Conduct
-
-Please adhere to our [Code of Conduct](CODE_OF_CONDUCT.md) in all your interactions with the project.
-
 ## Reporting Issues
 
 If you encounter any issues, please report them using the [issue tracker](https://github.com/danvers/critcode24/issues). Provide as much detail as possible to help us understand and resolve the issue.
