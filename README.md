@@ -32,9 +32,9 @@ cd critcode24
 
 Here are some examples of critical code studies included in this repository:
 
-- **Example 1:** Analysis of sorting algorithms
-- **Example 2:** Examination of memory management in C
-- **Example 3:** Review of security practices in web development
+- **Example 1:** A variation of 10 Print in Python
+- **Example 2:** Examination of the job interview example in Python
+- **Example 3:** Fibonacci sequence in Python
 
 ## Contributing
 
