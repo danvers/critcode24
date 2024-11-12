@@ -30,6 +30,7 @@ cd critcode24
 
 ## Examples
 
+The repository collects examples and snippets of code that can be found in the Introduction into Critical Code Studies by Mark Marino (https://github.com/markcmarino) - https://mitpress.mit.edu/9780262043656/critical-code-studies/. Additionally, the repository includes examples from the seminar "Introduction to Critical Code Studies" at Bielefeld University 2024.
 Here are some examples of critical code studies included in this repository:
 
 - **Example 1:** A variation of 10 Print in Python
