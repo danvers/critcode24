@@ -1,0 +1,41 @@
+# https://criticalcodestudies.com/flowmatic.html
+# File: FLOW-MATIC demo
+# Programming Language:FLOW-MATIC
+# Developed: 1958
+# Principal Authors: Grace Hopper, et al.
+# Platform: UNIVAC II Data-Automation System
+# Files Used: INVENTORY FILE, PRICE FILE
+
+0.  INPUT INVENTORY FILE-A PRICE FILE-B ; OUTPUT PRICED-INV FILE-C UNPRICED-INV FILE-D ; HSP D .
+1.    COMPARE PRODUCT-NO (A) WITH PRODUCT-NO (B) ; IF GREATER GO TO OPERATION 10 ; IF EQUAL GO TO OPERATION 5 ; OTHERWISE GO TO OPERATION 2
+2.    TRANSFER A TO D .
+3.    WRITE-ITEM D .
+4.    JUMP TO OPERATION 8 .
+5.    TRANSFER A TO C .
+6.    MOVE UNIT-PRICE (B) TO UNIT-PRICE (C) .
+7.  WRITE-ITEM C .
+8.  READ-ITEM A ; IF END OF DATA GO TO OPERATION 14 .
+9.  JUMP TO OPERATION 1 .
+10.  READ ITEM B ; IF END OF DATA GO TO OPERATION 12 .
+11.  JUMP TO OPERATION 1 .
+12.  SET OPERATION 9 TO GO TO OPERATION 2 .
+13.  JUMP TO OPERATION 2 .
+14.  TEST PRODUCT-NO (B) AGAINST ZZZZZZZZZZZZ ; IF EQUAL GO TO OPERATION 16 ; OTHERWISE GO TO OPERATION 15 .
+15.  REWIND B .
+16.  CLOSE-OUT FILES C ; D .
+17.  STOP . (END)
+
+# Code explanation, also provided in the Introduction to Critical Code Studies 
+
+# 0: Reads two files (A and B) and writes two files (C and D). HSP D tells the machine to print that file using the UNIVAC high-speed printer.
+# 1: Compares the product number of A & B. If A is greater, it moves to operation 10. If PRODUCT-NO (A) equals PRODUCT-NO (B), the program moves to the next step. If less, it goes to operation 2. The programming language uses both GOTO and JUMP TO. FLOW-MATIC introduced the if-then concept into programming languages, according to Jean Sammet (1969, 325).
+# 2–4: If the product number of A is less than the product number of B, for that particular item then it must not have a price, so it is placed by the next few operations into the unpriced file. WRITE-ITEM records the product number on magnetic tape.
+# 5–7: Follows the same pattern as 2–4, but uses C as the destination. In line 6, not only is the data in B moved to C, but the items are assigned the name UNIT-PRICE.
+# 8: Reads a new item from the A file. If this is the last item, it moves to the end. If it is not, it goes back to the comparison operation at the top of the program.
+# 10: This set of instructions advances B to the next value, unless the program has reached the end of the file, in which case it moves to the ending.
+# 12: In a very unusual bit of syntax, if the program has reached the end of list B without reaching the end of the file, it needs to advance item A and do more comparisons. Line 12 rewrites operation 9, presumably until the program finishes executing, to “GO TO OPERATION 2” and then goes there, essentially advancing the product number until it reaches the end of the list of products.
+# 14: Presumably this is a test to see if the end of the file has been reached. If so, it skips ahead two steps, if not; it goes to 15. ZZZZZZZZZZZZ follows the format that the Univac II programming manual refers to as a sentinel block, which is placed “at the end of the last tape of a file.” Sentinel blocks were ten characters long, but only the first six were significant. This full sentinel block was otherwise a command to rewind the tape (Sperry Rand Univac 1958, 13). Here is another sign of the hardware shaping the code.
+# 15: Rewind B. Physically returns file B to the start so it can be accessed from the beginning again.
+# 16: These instructions close out the two output files. Unlike file B, these output files do not need to be rewound, merely closed.
+# 17: In a bit of seeming redundancy, this code stops the execution of the program and marks the end of the program. Stop rewinds the instruction tape. As Damon Loren Baker (2014) phrases it, “end was a non executable marker at the end of all programs and subroutines.”
+# Functionality: This sample program reads and compares items from two lists, containing inventory and price, respectively, and from these creates two lists, one that lists products that have prices and one that lists products without a price.
