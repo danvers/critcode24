@@ -12,7 +12,7 @@ Welcome to the critcode24 repository! This project is dedicated to providing exa
 
 For more information on critical code studies, see the following resources: criticalcodestudies.com, the Critical Code Studies Working Groups (https://wg.criticalcodestudies.com/).
 
-About the course: The course "Critical Code Studies" is an introduction to the field of Critical Code Studies (CCS) and explores the social, cultural, and political implications of software development. The course covers topics such as code analysis, software studies, digital humanities, and critical theory. Students will learn how to analyze code from a critical perspective and engage with the broader implications of software development. The course is designed for students in educational science, computer science, and digital humanities who are interested in exploring the intersection of technology and society.
+About the course: The course "Introduction to Critical Code Studies" is an introduction to the field of Critical Code Studies (CCS) and explores the social, cultural, and political implications of software development. The course covers topics such as code analysis, software studies, digital humanities, and critical theory. Students will learn how to analyze code from a critical perspective and engage with the broader implications of software development. The course is designed for students in educational science, computer science, and digital humanities who are interested in exploring the intersection of technology and society.
 
 ## Getting Started
 
