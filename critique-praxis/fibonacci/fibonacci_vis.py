@@ -47,7 +47,6 @@ def main():
             print("Please enter a valid integer.")
 
     sequence = fibonacci(length)
-    print("Fibonacci sequence of length", length, ":", sequence)
     plot_fibonacci(sequence)
 
 # Entry point of the program.
