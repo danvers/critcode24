@@ -30,7 +30,7 @@ cd critcode24
 
 ## Examples
 
-The repository collects examples and snippets of code that can be found in the Introduction into Critical Code Studies by Mark Marino (https://github.com/markcmarino) - https://mitpress.mit.edu/9780262043656/critical-code-studies/. Additionally, the repository includes examples from the seminar "Introduction to Critical Code Studies" at Bielefeld University 2024. These examples are rooted in the tradition of critical code studies and explore the social, cultural, and political implications of software development.
+The repository collects examples and snippets of code that can be found in the [Introduction into Critical Code Studies](https://mitpress.mit.edu/9780262043656/critical-code-studies/) by [Mark Marino](https://github.com/markcmarino). Additionally, the repository includes examples from the seminar "Introduction to Critical Code Studies" at Bielefeld University 2024. These examples are rooted in the tradition of CCS and explore the social, cultural, and political implications of software development. The folder critique-praxis refers to the idea of coding praxis as discussed by [Geoff Cox, Alex McLean Adrian Ward (2004)](https://monoskop.org/File:Cox_McLean_Ward_2004_Coding_Praxis_Reconsidering_the_Aesthetics_of_Code.pdf)
 Here are some snippets included in this repository:
 
 - **Example 1:** A variation of 10 Print in Python
